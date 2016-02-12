@@ -33,12 +33,17 @@ namespace Tasks.Repositories
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            DatabaseContext.Entry(entity).State = EntityState.Modified;
         }
 
         public void Dispose()
         {
             DatabaseContext.Dispose();
+        }
+
+        public void SaveChanges()
+        {
+            DatabaseContext.SaveChanges();
         }
     }
 }

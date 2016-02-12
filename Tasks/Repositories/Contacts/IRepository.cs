@@ -11,5 +11,6 @@ namespace Tasks.Repositories.Contacts
         IEnumerable<TEntity> GetAll();
         void Remove(TEntity entity);
         void Update(TEntity entity);
+        void SaveChanges();
     }
 }
