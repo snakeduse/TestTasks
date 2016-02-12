@@ -32,8 +32,6 @@ namespace Tasks
 
             container.EnablePerWebRequestScope();
             container.EnableWebApi(GlobalConfiguration.Configuration);
-
-            //DependencyResolver.SetResolver(container);
         }
     }
 }
