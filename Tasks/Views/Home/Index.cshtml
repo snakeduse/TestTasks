@@ -1,16 +1,27 @@
 ﻿@{
     ViewBag.Title = "Задачи";
 }
-
-<table class="table table-striped tasks-table">
-    <thead>
-        <tr>
-            <td>Задача</td>
-            <td>Статус</td>
-            <td>Выполнено, %</td>
-            <td>Тип</td>
-            <td>Изменена</td>
-            <td>Создана</td>
-        </tr>
-    </thead>
-</table>
+<div ng-controller="tasksController">
+    <table class="table table-striped tasks-table">
+        <thead>
+            <tr>
+                <td>Задача</td>
+                <td>Статус</td>
+                <td>Выполнено, %</td>
+                <td>Тип</td>
+                <td>Изменена</td>
+                <td>Создана</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="task in Tasks">
+                <td>{{task.Name}}</td>
+                <td>{{task.TaskStatus.Name}}</td>
+                <td>{{task.Percent}}</td>
+                <td>{{task.TaskType.Name}}</td>
+                <td>{{task.StatusLastEdit}}</td>
+                <td>{{task.CreateDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
