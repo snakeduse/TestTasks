@@ -1,8 +1,8 @@
 ﻿(function () {
     'use strict';
 
-    var heroesService = angular.module('tasksService', ['ngResource']);
-    heroesService.factory('Tasks', ['$resource',
+    var tasksService = angular.module('tasksService', ['ngResource']);
+    tasksService.factory('Tasks', ['$resource',
         function ($resource) {
             return $resource('/api/tasks', {}, {
                 getAll: { method: 'GET', params: {}, isArray: true }
