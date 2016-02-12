@@ -6,7 +6,11 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Http;
-using System.Web.Routing;
+using LightInject;
+using Tasks.Repositories.Contacts;
+using Tasks.Repositories;
+using Tasks.Models;
+using System.Data.Entity;
 
 namespace Tasks
 {
@@ -19,6 +23,17 @@ namespace Tasks
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            var container = new ServiceContainer();
+            container.RegisterApiControllers();
+
+            container.Register<DbContext, TasksEntities>();
+            container.Register<ITasksRepository, TasksRepository>(new PerScopeLifetime());
+
+            container.EnablePerWebRequestScope();
+            container.EnableWebApi(GlobalConfiguration.Configuration);
+
+            //DependencyResolver.SetResolver(container);
         }
     }
 }

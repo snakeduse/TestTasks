@@ -35,5 +35,10 @@ namespace Tasks.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public void Dispose()
+        {
+            DatabaseContext.Dispose();
+        }
     }
 }

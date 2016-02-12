@@ -1,18 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Tasks.Models;
+using Tasks.Repositories;
+using Tasks.Repositories.Contacts;
 
 namespace Tasks.Api
 {
     public class TasksController : ApiController
     {
-        // GET: api/Tasks
-        public IEnumerable<string> Get()
+        private ITasksRepository _repository;
+
+        public TasksController(ITasksRepository repository)
         {
-            return new string[] { "value1", "value2" };
+            _repository = repository;
+        }
+
+        // GET: api/Tasks
+        public IEnumerable<Task> Get()
+        {
+            return _repository.GetAll();
         }
 
         // GET: api/Tasks/5
