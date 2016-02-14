@@ -16,7 +16,7 @@
         <tbody>
             <tr ng-repeat="task in Tasks">
                 <td>{{task.Name}}</td>
-                <td>{{ getStatusName(task.Status) }}</td>
+                <td> <span title="{{ getStatusName(task.Status) }}" class="status-color-{{task.Status}}"></span></td>
                 <td>{{task.Percent}}</td>
                 <td>{{ getTypeName (task.Type) }}</td>
                 <td>{{task.StatusLastEdit | date:'dd.MM.yyyy HH:mm:ss'}}</td>

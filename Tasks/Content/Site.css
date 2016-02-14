@@ -24,3 +24,35 @@
 .tasks-table tbody{
     text-align: center;
 }
+
+.status-color-1,
+.status-color-2,
+.status-color-3,
+.status-color-4{
+    min-width: 60px;
+    min-height: 25px;
+    display: inline-block;
+}
+
+/* Еще не выполнялась */
+.status-color-1{
+    border: 1px solid #808080;
+    background-color: darkgray;
+}
+
+/* Еще не выполнялась */
+.status-color-2{
+    border: 1px solid #1d6d75;
+    background-color: #15aab9;
+}
+
+/* Еще не выполнялась */
+.status-color-3{
+    border: 1px solid #408e2a;
+    background-color: #26ae57;
+}
+
+.status-color-4{
+    border: 1px solid #9c2e2e;
+    background-color: #c74b4b;
+}
