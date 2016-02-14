@@ -3,6 +3,7 @@
 
     angular.module('tasksApp', [
         'tasksService',
-        'statusesService'
+        'statusesService',
+        'typesService'
     ]);
 })();

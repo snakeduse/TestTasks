@@ -18,9 +18,9 @@
                 <td>{{task.Name}}</td>
                 <td>{{ getStatusName(task.Status) }}</td>
                 <td>{{task.Percent}}</td>
-                <td>{{task.TaskType.Name}}</td>
-                <td>{{task.StatusLastEdit}}</td>
-                <td>{{task.CreateDate}}</td>
+                <td>{{ getTypeName (task.Type) }}</td>
+                <td>{{task.StatusLastEdit | date:'dd.MM.yyyy HH:mm:ss'}}</td>
+                <td>{{task.CreateDate | date:'dd.MM.yyyy HH:mm:ss'}}</td>
             </tr>
         </tbody>
     </table>

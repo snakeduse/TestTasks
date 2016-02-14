@@ -32,6 +32,7 @@ namespace Tasks
                       "~/Scripts/app.js",
                       "~/Scripts/Services/tasksService.js",
                       "~/Scripts/Services/statusesService.js",
+                      "~/Scripts/Services/typesService.js",
                       "~/Scripts/Constrollers/tasksController.js"));
             #endregion JS
 

@@ -256,6 +256,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Services\statusesService.js" />
     <Content Include="Scripts\Services\tasksService.js" />
+    <Content Include="Scripts\Services\typesService.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
