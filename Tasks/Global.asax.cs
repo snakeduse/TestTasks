@@ -29,6 +29,7 @@ namespace Tasks
 
             container.Register<DbContext, TasksEntities>();
             container.Register<ITasksRepository, TasksRepository>(new PerScopeLifetime());
+            container.Register<ITaskStatusesRepository, TaskStatusesRepository>(new PerScopeLifetime());
 
             container.EnablePerWebRequestScope();
             container.EnableWebApi(GlobalConfiguration.Configuration);

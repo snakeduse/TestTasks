@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tasks.Models
+namespace Tasks.Database
 {
     using System;
     using System.Data.Entity;
@@ -18,9 +18,6 @@ namespace Tasks.Models
         public TasksEntities()
             : base("name=TasksEntities")
         {
-            Configuration.ProxyCreationEnabled = false;
-            Configuration.AutoDetectChangesEnabled = false;
-            Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
