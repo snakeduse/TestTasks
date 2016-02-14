@@ -157,6 +157,7 @@
   <ItemGroup>
     <Compile Include="Api\StatusesController.cs" />
     <Compile Include="Api\TasksController.cs" />
+    <Compile Include="Api\TypesController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -199,9 +200,11 @@
     <Compile Include="Repositories\Contacts\IRepository.cs" />
     <Compile Include="Repositories\Contacts\ITasksRepository.cs" />
     <Compile Include="Repositories\Contacts\ITaskStatusesRepository.cs" />
+    <Compile Include="Repositories\Contacts\ITaskTypesRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\TasksRepository.cs" />
     <Compile Include="Repositories\TaskStatusesRepository.cs" />
+    <Compile Include="Repositories\TaskTypesRepository.cs" />
     <Compile Include="Services\Contracts\ITasksService.cs" />
     <Compile Include="Services\TasksService.cs" />
   </ItemGroup>
