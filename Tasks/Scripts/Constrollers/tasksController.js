@@ -14,7 +14,8 @@
         $scope.Types = Types.getAll();
 
         var getElementName = (function (elements, id) {
-            var element = elements[id];
+            var element = elements.find(function (element) { return element.Id == id });
+
             if (element) {
                 return element.Name;
             }
