@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('tasksApp', [
-        'tasksService'
+        'tasksService',
+        'statusesService'
     ]);
 })();

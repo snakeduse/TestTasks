@@ -31,6 +31,7 @@ namespace Tasks
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                       "~/Scripts/app.js",
                       "~/Scripts/Services/tasksService.js",
+                      "~/Scripts/Services/statusesService.js",
                       "~/Scripts/Constrollers/tasksController.js"));
             #endregion JS
 
