@@ -8,6 +8,7 @@
     tasksController.$inject = ['$scope', 'Tasks', 'Statuses', 'Types'];
 
     function tasksController($scope, Tasks, Statuses, Types) {
+        $scope.searchTasks= '';     // set the default search/filter term
 
         $scope.Tasks = Tasks.getAll();
         $scope.Statuses = Statuses.getAll();

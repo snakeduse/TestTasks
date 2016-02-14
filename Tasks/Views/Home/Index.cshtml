@@ -2,6 +2,15 @@
     ViewBag.Title = "Задачи";
 }
 <div ng-controller="tasksController">
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                <input type="text" class="form-control" placeholder="Поиск" ng-model="searchTask">
+            </div>
+        </div>
+    </form>
+
     <table class="table table-striped tasks-table">
         <thead>
             <tr>
@@ -14,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="task in Tasks">
+            <tr ng-repeat="task in Tasks | filter:searchTask">
                 <td>{{task.Name}}</td>
                 <td> <span title="{{ getStatusName(task.Status) }}" class="status-color-{{task.Status}}"></span></td>
                 <td>{{task.Percent}}</td>
