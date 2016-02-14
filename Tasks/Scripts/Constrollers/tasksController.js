@@ -8,7 +8,7 @@
     tasksController.$inject = ['$scope', 'Tasks', 'Statuses', 'Types'];
 
     function tasksController($scope, Tasks, Statuses, Types) {
-        $scope.searchTasks= '';     // set the default search/filter term
+        $scope.searchItem = '';     // set the default search/filter term
 
         $scope.Tasks = Tasks.getAll();
         $scope.Statuses = Statuses.getAll();
@@ -32,6 +32,22 @@
         $scope.getTypeName = (function (typeId) {
             var name = getElementName($scope.Types, typeId);
             return name;
+        });
+
+        var isSearchItemExists = (function (string, substring) {
+            return string.toLowerCase().indexOf($scope.searchItem.toLowerCase()) > -1;
+        });
+
+        $scope.searchTask = (function (task) {
+            var statusName = $scope.getStatusName(task.Status),
+                typeName = $scope.getTypeName(task.Type);
+
+            return isSearchItemExists(task.Name)||
+                isSearchItemExists(task.CreateDate) ||
+                isSearchItemExists(task.EndDate) ||
+                isSearchItemExists(task.StatusLastEdit) ||
+                isSearchItemExists(statusName) ||
+                isSearchItemExists(typeName);
         });
     }
 })();
